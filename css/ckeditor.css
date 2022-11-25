@@ -1,0 +1,67 @@
+.text-tiny {
+  font-size: 0.7em;
+}
+
+.text-small {
+  font-size: 0.85em;
+}
+
+.text-big {
+  font-size: 1.4em;
+}
+
+.text-huge {
+  font-size: 1.8em;
+}
+
+.prose {
+  --tw-prose-counters: rgb(55, 65, 81);
+  --tw-prose-bullets: rgb(55, 65, 81);
+
+  --jn-editor-white: rgb(255, 255, 255);
+  --jn-editor-gray-700: rgb(55, 65, 81);
+  --jn-editor-green-600: rgb(22, 163, 74);
+}
+
+.prose ul {
+  list-style: disc;
+}
+
+.prose ul ul {
+  list-style: circle;
+}
+
+.prose ul ul ul {
+  list-style: square;
+}
+
+.prose ol {
+  list-style: decimal;
+}
+
+.prose .todo-list li {
+  margin-bottom: 5px;
+}
+
+.prose .todo-list li .todo-list {
+  margin-top: 5px;
+}
+
+.prose .todo-list .todo-list__label>input {
+  position: relative;
+  top: -1px;
+  left: -22px;
+  margin-right: -8px;
+  background-color: var(--jn-editor-white);
+  border: 1px solid var(--jn-editor-gray-700);
+  border-radius: 2px;
+}
+
+.prose .todo-list .todo-list__label>input:checked {
+  background-color: hsl(126, 64%, 41%);
+  border-color: hsl(126, 64%, 41%);
+}
+
+.prose .image {
+  display: none;
+}
