@@ -18,6 +18,14 @@
   --tw-prose-counters: rgb(55, 65, 81);
   --tw-prose-bullets: rgb(55, 65, 81);
 
+  /*
+    In CKEditor, line height is 1.5. In prose, line height is 1.75.
+    line-height: 1.5;
+  */
+
+  --ck-image-style-spacing: 1.5em;
+  --ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
+
   --jn-editor-white: rgb(255, 255, 255);
   --jn-editor-gray-700: rgb(55, 65, 81);
   --jn-editor-green-600: rgb(22, 163, 74);
@@ -63,5 +71,84 @@
 }
 
 .prose .image {
-  display: none;
+  display: table;
+  clear: both;
+  text-align: center;
+  margin: 0.9em auto;
+  min-width: 50px;
 }
+
+.prose .image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 100%
+}
+
+.prose img {
+  display: inline-flex;
+  margin: 0;
+  max-width: 100%;
+  /*
+    As here has no span but the editor has so
+      set baseline as span
+      and no need align-items: flex-start; as img has no items.
+  */
+  vertical-align: baseline;
+}
+
+.prose .image-style-block-align-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.prose .image-style-block-align-right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.prose .image-style-align-left {
+  clear: none;
+  float: left;
+  margin-right: var(--ck-image-style-spacing);
+}
+
+.prose .image-style-align-right {
+  clear: none;
+  float: right;
+  margin-left: var(--ck-image-style-spacing);
+}
+
+.prose p + .image-style-align-left,
+.prose p + .image-style-align-right {
+  margin-top: 0;
+}
+
+.prose p .image-style-align-left {
+  margin-top: var(--ck-inline-image-style-spacing);
+  margin-bottom: var(--ck-inline-image-style-spacing);
+  margin-right: var(--ck-inline-image-style-spacing);
+}
+
+.prose p .image-style-align-right {
+  margin-top: var(--ck-inline-image-style-spacing);
+  margin-bottom: var(--ck-inline-image-style-spacing);
+  margin-left: var(--ck-inline-image-style-spacing);
+}
+
+.prose .image.image_resized {
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.prose .image.image_resized img {
+  width: 100%;
+}
+
+/*
+  Might need to have image-inline, image-style-align-center,
+    and image-style-side as well.
+  Look at ckeditor5/packages/ckeditor5-image/theme/image.css
+    and imagestyle.css, imageresize.css.
+*/

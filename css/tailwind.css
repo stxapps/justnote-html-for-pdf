@@ -1371,10 +1371,6 @@ select {
   margin-bottom: 0;
 }
 
-.relative {
-  position: relative;
-}
-
 .mx-12 {
   margin-left: 3rem;
   margin-right: 3rem;
@@ -1388,18 +1384,6 @@ select {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .antialiased {
