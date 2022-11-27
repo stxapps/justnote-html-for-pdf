@@ -1391,6 +1391,14 @@ select {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.prose-h1\:mb-\[0\.6967em\] :is(:where(h1):not(:where([class~="not-prose"] *))) {
+  margin-bottom: 0.6967em;
+}
+
+.prose-h1\:leading-normal :is(:where(h1):not(:where([class~="not-prose"] *))) {
+  line-height: 1.5;
+}
+
 .prose-p\:my-0 :is(:where(p):not(:where([class~="not-prose"] *))) {
   margin-top: 0px;
   margin-bottom: 0px;
