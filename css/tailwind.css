@@ -1414,19 +1414,13 @@ html {
   margin-bottom: 0;
 }
 
-.mx-12 {
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 .antialiased {
