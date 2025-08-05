@@ -67,6 +67,10 @@
   list-style-type: upper-roman;
 }
 
+.prose .todo-list {
+  list-style: none;
+}
+
 .prose .todo-list .todo-list__label>input {
   position: relative;
   top: -1px;
