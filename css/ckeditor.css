@@ -32,19 +32,39 @@
 }
 
 .prose ul {
-  list-style: disc;
+  list-style-type: disc;
 }
 
 .prose ul ul {
-  list-style: circle;
+  list-style-type: circle;
 }
 
 .prose ul ul ul {
-  list-style: square;
+  list-style-type: square;
+}
+
+.prose ul ul ul ul {
+  list-style-type: square;
 }
 
 .prose ol {
-  list-style: decimal;
+  list-style-type: decimal;
+}
+
+.prose ol ol {
+  list-style-type: lower-latin;
+}
+
+.prose ol ol ol {
+  list-style-type: lower-roman;
+}
+
+.prose ol ol ol ol {
+  list-style-type: upper-latin;
+}
+
+.prose ol ol ol ol ol {
+  list-style-type: upper-roman;
 }
 
 .prose .todo-list .todo-list__label>input {
